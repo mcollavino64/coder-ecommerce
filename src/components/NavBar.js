@@ -1,6 +1,7 @@
 import logo from '../logo.svg';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
+import CartWidget from "./CartWidget.js"
 
 export const NavBar = () =>{
     return  (<Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
@@ -23,7 +24,10 @@ export const NavBar = () =>{
         <Nav.Link href="#about-us"> About Us </Nav.Link>
         <Nav.Link href="#contact-us"> Contact Us </Nav.Link>
       </Nav>
-    </Navbar.Collapse>      
+    </Navbar.Collapse>
+
+    <CartWidget />   
+
   </Navbar>
     )
 }
