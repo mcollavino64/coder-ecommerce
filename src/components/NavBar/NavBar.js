@@ -1,7 +1,7 @@
-import logo from '../logo.svg';
+import logo from "../img/logo.svg"
 import 'bootstrap/dist/css/bootstrap.css'
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
-import CartWidget from "./CartWidget.js"
+import CartWidget from "../cartWidget/CartWidget"
 
 export const NavBar = () =>{
     return  (<Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
