@@ -1,8 +1,9 @@
 import { Component } from "react";
-import { FaCartArrowDown } from 'react-icons/fa';
+import { FaPizzaSlice } from 'react-icons/fa';
+import { CartWidgetStyle } from "./StyleCartWidget";
 
 export default class CartWidget extends Component{
   render(){
-    return <h3> <FaCartArrowDown color="red"/> </h3> ;
+    return <CartWidgetStyle> <FaPizzaSlice color="yellow"/> </CartWidgetStyle> ;
   }
 }

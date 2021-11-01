@@ -1,3 +1,6 @@
+import { ProductButton } from "./styleItemCount"
+
+
 const Contador = ({setContador,contador,stock}) =>{
     
     let cantidadItem = {contador}.contador    
@@ -21,11 +24,11 @@ const Contador = ({setContador,contador,stock}) =>{
     return <>
 
 
-        <button onClick={onDecrease}>-</button>
-        <button onClick={onIncrease}>+</button>
+        <ProductButton onClick={onDecrease}>-</ProductButton>
+        <ProductButton onClick={onIncrease}>+</ProductButton>
 
         <div>
-            <button onClick={addToCart} >ADD TO CART</button>
+            <ProductButton onClick={addToCart} >Agregar al pedido</ProductButton>
         </div>
         
     </>

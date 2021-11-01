@@ -14,7 +14,7 @@ function ItemDetailContainer() {
     new Promise((resolve, reject) => {
       setTimeout(
         () => resolve(productsJson.filter((item) => item.id === id)),
-        3000
+        0
       );
     }).then((data) => setProduct(data[0]));
   }, []);

@@ -13,7 +13,7 @@ function ItemListContainer() {
     useEffect(() => {
       new Promise((resolve, reject) => {
         setLoading(true);
-        setTimeout(() => resolve(productsJson), 3000);
+        setTimeout(() => resolve(productsJson), 0);
       })
         .then((data) => setProducts(data))
         .finally(() => {
@@ -21,9 +21,13 @@ function ItemListContainer() {
         });
     }, []);
   
-    return loading ? (
-      <h1>Loading ...</h1>
-    ) : (
+    // return loading ? (
+    //   <h1>Loading ...</h1>
+    // ) : (
+    //   <ItemList products={products} onAdd={onAdd} />
+    // );
+
+    return (    
       <ItemList products={products} onAdd={onAdd} />
     );
   }

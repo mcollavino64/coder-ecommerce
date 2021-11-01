@@ -1,10 +1,11 @@
 import './App.css';
 import React,{useState} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import {NavBar} from './components/NavBar/NavBar'
-import ItemListContainer from "./components/itemListContainer/itemListContainer"
-import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer"
-import {itemContainer,itemContent} from "./components/item/itemContainer"
+import {NavBar} from './components/NavBar/NavBar';
+import ItemListContainer from "./components/itemListContainer/itemListContainer";
+import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
+import {ContainerGeneral} from "./ContainerGeneral";
+// import { GlobalStyle } from './globalStyles';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   const [contador,setContador] = useState(0);
   
   return (
+    <ContainerGeneral>
     <BrowserRouter>
     {/* <itemContent>
       <itemContainer>       */}
@@ -24,9 +26,10 @@ function App() {
             <NavBar/>
           </header>
 
-          <div className="content">          
-            <section>
+          {/* <div className="content">          
+            <section> */}
               {/* <h3>  <ItemListContainer greeting={list} /> </h3> */}
+              
               <Switch>
                 
                 <Route exact path="/">
@@ -38,13 +41,15 @@ function App() {
                 </Route>
 
               </Switch>
+              
 
         
-            </section>
-          </div>
+            {/* </section>
+          </div> */}
         {/* </itemContainer>
       </itemContent> */}
       </BrowserRouter>
+      </ContainerGeneral>
   );
 }
 
