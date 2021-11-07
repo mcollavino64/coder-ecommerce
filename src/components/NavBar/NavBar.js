@@ -13,7 +13,7 @@ export const NavBar = () =>{
     <Navbar.Collapse>
       <Nav>
         <NavDropdown title="Products"> 
-          <NavDropdown.Item href="#products/pizzas" >Pizzas</NavDropdown.Item>
+          <NavDropdown.Item href="/products/pizzas" >Pizzas</NavDropdown.Item>
           <NavDropdown.Item href="#products/coffe" >Coffe</NavDropdown.Item>
           <NavDropdown.Item href="#products/drinks" >Drinks</NavDropdown.Item>
           <NavDropdown.Divider/>

@@ -5,6 +5,8 @@ import {NavBar} from './components/NavBar/NavBar';
 import ItemListContainer from "./components/itemListContainer/itemListContainer";
 import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
 import {ContainerGeneral} from "./ContainerGeneral";
+import ItemCategoryContainer from './components/itemCategoryContainer/ItemCategoryContainer';
+
 // import { GlobalStyle } from './globalStyles';
 
 
@@ -39,6 +41,11 @@ function App() {
                 <Route exact path="/item/:id">            
                   <ItemDetailContainer/>
                 </Route>
+
+                <Route exact path="/products/pizzas">            
+                <h1>  <ItemCategoryContainer/> </h1>
+                </Route>
+
 
               </Switch>
               
