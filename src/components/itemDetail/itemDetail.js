@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {StyledDetailContainer,ProductButtonDetail} from "./StyleItemDetail";
-
+// import Contador from "../itemCount/itemCount";
 
 function ItemDetail(props) {
   const [cantidad, setCantidad] = useState();
+
   const onAdd = (producto) => {
     console("agregaron un producto", producto);
     // voy a motrar un boton que diga, terminar  mi compra
     // y me va a redigir a una nueva pagina /cart  que por ahora esta vacio
   };
+
   return (
     <StyledDetailContainer>      
       <h1> {props.name}</h1>
@@ -17,7 +19,7 @@ function ItemDetail(props) {
       <h4>$ {props.price} {props.currency}</h4>
       {/* <h3>stock {props.stock}</h3> */}
       {/** crear el itemCount */}
-      {/* <ItemCount onAdd={onAdd} /> */}      
+      {/* <Contador onAdd={onAdd} />       */}
       <ProductButtonDetail 
           onClick={(e) => {
           e.preventDefault();

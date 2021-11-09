@@ -12,10 +12,7 @@ import ItemCategoryContainer from './components/itemCategoryContainer/ItemCatego
 
 function App() {
 
-  // const list = [{ title: "item de lista 1" },
-  // { title: "item de lista 2" },
-  // { title: "item de lista 3" }
-  // ]
+
   
   const [contador,setContador] = useState(0);
   

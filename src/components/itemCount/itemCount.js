@@ -3,9 +3,11 @@ import { ProductButton } from "./styleItemCount"
 
 const Contador = ({setContador,contador,stock}) =>{
     
-    let cantidadItem = {contador}.contador    
+    let cantidadItem = {contador}.contador
+    // let [cantidadItem,setCantidadItem] = useState({contador}.contador)
+    
 
-    const addToCart = () =>{
+    const onAdd = () =>{
         alert('Cantidad a agregar ' + cantidadItem)
     }
 
@@ -28,7 +30,7 @@ const Contador = ({setContador,contador,stock}) =>{
         <ProductButton onClick={onIncrease}>+</ProductButton>
 
         <div>
-            <ProductButton onClick={addToCart} >Agregar al pedido</ProductButton>
+            <ProductButton onClick={onAdd} >Agregar al pedido</ProductButton>
         </div>
         
     </>

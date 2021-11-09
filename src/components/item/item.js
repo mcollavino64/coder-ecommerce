@@ -13,7 +13,9 @@ function Item(props) {
          
                 <h3 style={{ fontSize:"1000"}} >{props.name}</h3>                
                 <h3>Listas para salir:  {props.stock}</h3>
-                {/* { <button onClick={() => props.onAdd(props)}>agregar</button> } */}
+
+                {/* { <button onClick={() => props.onAdd(props)}>Agregar</button> } */}
+
                 <Link to={`/item/${props.id}`} style={{ fontSize:"1"}} >Ver detalle del producto</Link>
                 <div>
                 <h3> Cantidad : {contador} </h3> 
