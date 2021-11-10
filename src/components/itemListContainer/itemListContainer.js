@@ -1,14 +1,15 @@
 import {useEffect, useState} from 'react';
 import {productsJson} from '../productJson/productsJson'
 import ItemList from "../itemList/itemList"
+import "../itemListContainer/ItemListContainer.css"
 
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
   
-    const onAdd = (producto) => {
-      console.log("agregaron un producto", producto);
-    };
+    // const onAdd = (producto) => {
+    //   console.log("agregaron un producto", producto);
+    // };
     
     useEffect(() => {
       new Promise((resolve, reject) => {
@@ -27,8 +28,10 @@ function ItemListContainer() {
     //   <ItemList products={products} onAdd={onAdd} />
     // );
 
-    return (    
-      <ItemList products={products} onAdd={onAdd} />
+    return (   
+      <div className="Items">
+        { <ItemList products={products}  /> /*onAdd={onAdd} */}
+      </div>
     );
   }
   

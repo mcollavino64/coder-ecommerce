@@ -1,12 +1,13 @@
 import Item from "../item/item"
+import "../itemList/itemList.css";
 
 function ItemList({ products, onAdd }) {
   return (
-    <div>
-      {products.map((item) => (
-        <Item {...item} onAdd={onAdd} />
+    <>
+      {products.map((item) => (        
+          <Item {...item} onAdd={onAdd} />
       ))}
-    </div>
+    </>
   );
 }
 

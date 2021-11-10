@@ -2,19 +2,9 @@ import { ProductButton } from "./styleItemCount"
 import { useState } from "react";
 
 
-const Contador = ({setContador,contador,stock,setFlagShowButton}) =>{
+const Contador = ({setContador,contador,stock}) =>{
     
-    let cantidadItem = {contador}.contador
-
-    // const onClick = () =>{
-    //   props.onAdd.(flagShowButton)
-    // }
-
-    const onAdd = () =>{
-        // alert('Cantidad a agregar ' + cantidadItem)
-        setFlagShowButton=true;
-    }
-
+  let cantidadItem = {contador}.contador
 
   const onIncrease = () => {
     if (stock>contador) {
@@ -29,14 +19,8 @@ const Contador = ({setContador,contador,stock,setFlagShowButton}) =>{
   }
     return <>
 
-      {/* {flag ?} */}
-
         <ProductButton onClick={onDecrease}>-</ProductButton>
         <ProductButton onClick={onIncrease}>+</ProductButton>
-
-        <div>
-            <ProductButton onClick={onAdd} >Agregar al pedido</ProductButton>
-        </div>
         
     </>
 }

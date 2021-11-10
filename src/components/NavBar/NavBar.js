@@ -1,4 +1,4 @@
-import logo from "../img/logo.svg"
+import logo from "../img/logoPizzeria.png"
 import 'bootstrap/dist/css/bootstrap.css'
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
 import CartWidget from "../cartWidget/CartWidget"
@@ -10,7 +10,7 @@ export const NavBar = () =>{
 
     return  (<Navbar bg="transparent" variant="dark" sticky="top" expand="sm" collapseOnSelect>
     <Navbar.Brand>
-      <img src={logo} width="40px" height="40px" alt="volver al Home" onClick={()=>{
+      <img src={logo} width="70px" height="50px" alt="volver al Home" onClick={()=>{
         window.location="../"
       }} />      
     </Navbar.Brand>
@@ -18,16 +18,16 @@ export const NavBar = () =>{
     <Navbar.Toggle/>        
     <Navbar.Collapse>
       <Nav>
-        <NavDropdown title="Products"> 
-          <NavDropdown.Item href="/products/pizzas" >Pizzas</NavDropdown.Item>
-          <NavDropdown.Item href="#products/coffe" >Coffe</NavDropdown.Item>
-          <NavDropdown.Item href="#products/drinks" >Drinks</NavDropdown.Item>
-          <NavDropdown.Divider/>
-          <NavDropdown.Item href="#products/promo" >Promotion</NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Link href="#blog"> Blog </Nav.Link>
-        <Nav.Link href="#about-us"> About Us </Nav.Link>
-        <Nav.Link href="#contact-us"> Contact Us </Nav.Link>
+          <NavDropdown style={{ fontSize: `170%` }} title="Products"> 
+            <NavDropdown.Item href="/products/pizzas" >Pizzas</NavDropdown.Item>
+            <NavDropdown.Item href="#products/coffe" >Coffe</NavDropdown.Item>
+            <NavDropdown.Item href="#products/drinks" >Drinks</NavDropdown.Item>
+            <NavDropdown.Divider/>
+            <NavDropdown.Item href="#products/promo" >Promotion</NavDropdown.Item>
+          </NavDropdown>
+        <Nav.Link href="#blog"><h2>Blog</h2></Nav.Link>
+        <Nav.Link href="#about-us"><h2>About Us</h2></Nav.Link>
+        <Nav.Link href="#contact-us"><h2>Contact Us</h2></Nav.Link>
       </Nav>
     </Navbar.Collapse>
 
