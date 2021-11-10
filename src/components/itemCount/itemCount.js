@@ -1,14 +1,18 @@
 import { ProductButton } from "./styleItemCount"
+import { useState } from "react";
 
 
-const Contador = ({setContador,contador,stock}) =>{
+const Contador = ({setContador,contador,stock,setFlagShowButton}) =>{
     
     let cantidadItem = {contador}.contador
-    // let [cantidadItem,setCantidadItem] = useState({contador}.contador)
-    
+
+    // const onClick = () =>{
+    //   props.onAdd.(flagShowButton)
+    // }
 
     const onAdd = () =>{
-        alert('Cantidad a agregar ' + cantidadItem)
+        // alert('Cantidad a agregar ' + cantidadItem)
+        setFlagShowButton=true;
     }
 
 
@@ -25,6 +29,7 @@ const Contador = ({setContador,contador,stock}) =>{
   }
     return <>
 
+      {/* {flag ?} */}
 
         <ProductButton onClick={onDecrease}>-</ProductButton>
         <ProductButton onClick={onIncrease}>+</ProductButton>

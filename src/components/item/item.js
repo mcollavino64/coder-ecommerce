@@ -6,6 +6,10 @@ import {StyleItemFont} from "../item/styleItem"
 
 function Item(props) {
   const [contador,setContador] = useState(0);
+
+  const [flagShowButton,setFlagShowButton] = useState(false);
+
+
   return (
      <div style={{ border: "2px grey solid", margin: "5px" }}>
      
@@ -20,7 +24,7 @@ function Item(props) {
                 <div>
                 <h3> Cantidad : {contador} </h3> 
                     <Contador 
-                      setContador={setContador} contador={contador} stock={props.stock}>
+                      setContador={setContador} contador={contador} stock={props.stock} >
                     </Contador> 
                 </div>
                                  
