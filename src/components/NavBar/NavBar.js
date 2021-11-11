@@ -3,12 +3,29 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
 import CartWidget from "../cartWidget/CartWidget"
 import React,{useState} from 'react';
+// import styled,{css} from "styled-components";
+
+//context
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
+
+
 
 export const NavBar = () =>{
-  // export class Navbar extends Component{
 
+    const theme = useContext(ThemeContext) //context
 
-    return  (<Navbar bg="transparent" variant="dark" sticky="top" expand="sm" collapseOnSelect>
+    console.log(theme)
+
+    // return  (<Navbar bg="transparent" variant="dark" sticky="top" expand="sm" collapseOnSelect> 
+    return  (
+    <Navbar 
+        bg ={
+          theme.isDarkMode 
+            ? "info"
+            : "transparent"
+        }
+    >
     <Navbar.Brand>
       <img src={logo} width="70px" height="50px" alt="volver al Home" onClick={()=>{
         window.location="../"

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { productsJson } from "../productJson/productsJson"
 import ItemDetail from "../itemDetail/itemDetail"
 
+
 function ItemDetailContainer() {
 
   const [product, setProduct] = useState([]);
@@ -17,7 +18,7 @@ function ItemDetailContainer() {
     }).then((data) => setProduct(data[0]));
   }, []);
     
-  return <ItemDetail {...product} />;
+  return (<ItemDetail {...product} />);
 }
 
 export default ItemDetailContainer;
