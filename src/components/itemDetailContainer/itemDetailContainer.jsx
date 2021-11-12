@@ -3,8 +3,21 @@ import { useParams } from "react-router-dom";
 import { productsJson } from "../productJson/productsJson"
 import ItemDetail from "../itemDetail/itemDetail"
 
+//FIREBASE...INICIO
+// import { getFirestore } from "@firebase/firestore";
+// import {collecion,getDoc,doc} from "firebase/firestore"
+// import { useEffect } from "react";
+//FIREBASE...FIN
+
 
 function ItemDetailContainer() {
+
+    //FIREBASE...INICIO
+  // useEffect(() => {
+  //   const db = getFirestore();
+  //   const pizzaRef = doc(db,"items","HLA2HcNxhvyFOWwfFL3z");    
+  // }, [])
+  //FIREBASE...FIN
 
   const [product, setProduct] = useState([]);
   const { id } = useParams();

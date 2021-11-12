@@ -7,10 +7,10 @@ import ItemDetailContainer from "./components/itemDetailContainer/itemDetailCont
 import {ContainerGeneral} from "./ContainerGeneral";
 import ItemCategoryContainer from './components/itemCategoryContainer/ItemCategoryContainer';
 // import {divWhiteContainer} from './components/divWhiteContainer/divWhiteContainer'; 
-
 // import { GlobalStyle } from './globalStyles';
+import { ThemeContext } from "../src/context/ThemeContext"
 
-export const ThemeContext = createContext(); //context
+// export const ThemeContext = createContext(); //context
 
 function App() {
 

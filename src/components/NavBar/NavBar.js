@@ -7,7 +7,7 @@ import React,{useState} from 'react';
 
 //context
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../context/ThemeContext";
 
 
 
@@ -19,12 +19,17 @@ export const NavBar = () =>{
 
     // return  (<Navbar bg="transparent" variant="dark" sticky="top" expand="sm" collapseOnSelect> 
     return  (
-    <Navbar 
+    <Navbar variant="dark"
         bg ={
           theme.isDarkMode 
             ? "info"
             : "transparent"
         }
+        // variant ={
+        //   theme.isDarkMode 
+        //     ? "dark"
+        //     : "transparent"
+        // }     
     >
     <Navbar.Brand>
       <img src={logo} width="70px" height="50px" alt="volver al Home" onClick={()=>{
