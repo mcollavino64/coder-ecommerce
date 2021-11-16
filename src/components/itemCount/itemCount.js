@@ -1,6 +1,6 @@
 import { ProductButton } from "./styleItemCount"
 import { useState } from "react";
-
+// import { useCart } from "../../context/cartContext";
 
 const Contador = ({setContador,contador,stock}) =>{
     
@@ -17,6 +17,9 @@ const Contador = ({setContador,contador,stock}) =>{
       setContador(contador => contador - 1)
     }    
   }
+
+  // const { addToCart } = useCart();
+
     return <>
 
         <ProductButton onClick={onDecrease}>-</ProductButton>

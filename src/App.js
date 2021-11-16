@@ -10,22 +10,20 @@ import ItemCategoryContainer from './components/itemCategoryContainer/ItemCatego
 // import { GlobalStyle } from './globalStyles';
 import { ThemeContext } from "../src/context/ThemeContext"
 
-// export const ThemeContext = createContext(); //context
 
 function App() {
 
   const [contador,setContador] = useState(0);
 
-  //context
-  // const [carrito,setCarrito] = useState({});
+  //context  
   const [isDarkMode,setIsDarkMode] = useState(false);
   const switchDarkMode = () =>{
     setIsDarkMode(!isDarkMode);
   }
-  
+
   return (
     // context
-    <ThemeContext.Provider value={{isDarkMode,switchDarkMode}}>         
+    <ThemeContext.Provider value={{isDarkMode,switchDarkMode}}>               
             <ContainerGeneral>
                 <BrowserRouter>
 
@@ -50,12 +48,8 @@ function App() {
                       </Switch>                        
 
                   </BrowserRouter>
-
-                  {/* <divWhiteContainer> */}
-                      <button onClick={switchDarkMode}>Switchear Mode</button>
-                  {/* </divWhiteContainer> */}
-
-            </ContainerGeneral>        
+                <button onClick={switchDarkMode}>Switchear Mode</button>
+            </ContainerGeneral>      
     </ThemeContext.Provider>
   );
 }
